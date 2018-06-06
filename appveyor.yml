@@ -1,0 +1,24 @@
+version: '1.0.{build}'
+image: Visual Studio 2017
+branches:
+  only:
+  - master
+init:
+  - cmd: git config --global core.autocrlf true
+install:
+  - appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/v4.0.0/nuget.exe 
+before_build:
+  # Display .NET Core version
+  - cmd: dotnet --version
+  # Display minimal restore text
+  - cmd: dotnet restore ./ef_includer/ef_includer.csproj --verbosity m
+build_script:
+  - cmd: dotnet build ./ef_includer/ef_includer.csproj 
+  - cmd: dotnet pack  -c Release /p:PackageVersion=1.0.{build} 
+artifacts:
+- path: ./ef_includer/bin/Release/*.nupkg
+  name: NuGet
+ 
+on_finish :
+  # any cleanup in here
+deploy: off
