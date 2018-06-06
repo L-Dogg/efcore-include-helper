@@ -19,7 +19,7 @@ artifacts:
 - path: ./efcore-include-helper/bin/Release/*.nupkg
   name: NuGet
 deploy:
-- provider: NuGet
+  - provider: NuGet
+    symbol_server: https://ci.appveyor.com/nuget/l-dogg-2niyvd9l59q5
     api_key:
-    secure: odO06iUThLr3doXPGox3Ug12sUYRvCWzAlWeEIjJ/Jq/Exn3q4p0igOfXX38gH/R
-  skip_symbols: true
+      secure: odO06iUThLr3doXPGox3Ug12sUYRvCWzAlWeEIjJ/Jq/Exn3q4p0igOfXX38gH/R
