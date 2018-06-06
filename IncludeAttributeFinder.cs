@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace ef_includer
 {
-    public static class IncludeAttributeFinder
+    internal static class IncludeAttributeFinder
     {
         //TODO: how to handle cascade option
         public static IEnumerable<PropertyInfo> FindPropertiesWithIncludeAttribute(Type type) => 
