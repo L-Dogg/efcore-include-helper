@@ -11,12 +11,12 @@ before_build:
   # Display .NET Core version
   - cmd: dotnet --version
   # Display minimal restore text
-  - cmd: dotnet restore ./efcore-include-helper/ef_includer.csproj --verbosity m
+  - cmd: dotnet restore C:/projects/efcore-include-helper/ef_includer.csproj --verbosity m
 build_script:
-  - cmd: dotnet build ./efcore-include-helper/ef_includer.csproj 
+  - cmd: dotnet build C:/projects/efcore-include-helper/ef_includer.csproj 
   - cmd: dotnet pack  -c Release /p:PackageVersion=1.0.{build} 
 artifacts:
-- path: ./efcore-include-helper/bin/Release/*.nupkg
+- path: C:/projects/efcore-include-helper/bin/Release/*.nupkg
   name: NuGet
 deploy:
   - provider: NuGet
