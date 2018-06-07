@@ -14,7 +14,7 @@ before_build:
   - cmd: dotnet restore C:/projects/efcore-include-helper/ef_includer.csproj --verbosity m
 build_script:
   - cmd: dotnet build C:/projects/efcore-include-helper/ef_includer.csproj 
-  - cmd: dotnet pack  -c Release /p:PackageVersion=1.0.%APPVEYOR_BUILD_NUMBER%
+  - cmd: dotnet pack C:/projects/efcore-include-helper/ef_includer.csproj -c Release /p:PackageVersion=1.0.%APPVEYOR_BUILD_NUMBER%
 artifacts:
 - path: C:/projects/efcore-include-helper/bin/Release/*.nupkg
   name: NuGet
