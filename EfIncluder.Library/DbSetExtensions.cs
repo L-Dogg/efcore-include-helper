@@ -1,20 +1,20 @@
 ﻿using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
-namespace ef_includer
+namespace EfIncluder
 {
     public static class DbSetExtensions
     {
-        public static IQueryable<TEntity> IncludeMarkedProperties<TEntity>(this DbSet<TEntity> DbSet) 
+        public static IQueryable<TEntity> IncludeMarkedProperties<TEntity>(this DbSet<TEntity> dbSet)
             where TEntity : class
         {
-            //TODO: implement and test and handle incoming cascade option
             var properties = IncludeAttributeFinder.FindPropertiesWithIncludeAttribute(typeof(TEntity));
-            IQueryable<TEntity> retVal = DbSet;
+            IQueryable<TEntity> retVal = dbSet;
             foreach (var property in properties)
             {
                 retVal = retVal.Include(property.Name);
             }
+
             return retVal;
         }
     }

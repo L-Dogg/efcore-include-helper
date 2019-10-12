@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfIncluder.Tests", "EfIncluder.Tests\EfIncluder.Tests.csproj", "{D7D41C64-C51C-4F9B-9F0C-79EB5E43ADAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfIncluder.Library", "EfIncluder.Library\EfIncluder.Library.csproj", "{96BE3D48-BF43-4513-99F0-F2426623888F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7D41C64-C51C-4F9B-9F0C-79EB5E43ADAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D41C64-C51C-4F9B-9F0C-79EB5E43ADAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D41C64-C51C-4F9B-9F0C-79EB5E43ADAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D41C64-C51C-4F9B-9F0C-79EB5E43ADAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96BE3D48-BF43-4513-99F0-F2426623888F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BE3D48-BF43-4513-99F0-F2426623888F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BE3D48-BF43-4513-99F0-F2426623888F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BE3D48-BF43-4513-99F0-F2426623888F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

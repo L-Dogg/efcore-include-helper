@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>0.1.0</Version>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <Authors>orgiele</Authors>
+        <PackageTags>generic repository</PackageTags>
+        <Copyright>orgiele</Copyright>
+        <Description>
+            Instead of an onerous writining all the Include(x =&gt; x.PropName) methods when eager loading an entity in EF Core,
+            this package allows user to mark entity's properties with the [Include] attribute and then
+            include all those properties by using DbSet's IncludeMarkedProperties() method.
+        </Description>
+        <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+        <NeutralLanguage>en</NeutralLanguage>
+        <RepositoryUrl>https://github.com/L-Dogg/efcore-include-helper</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <RootNamespace>ef_includer</RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.0" />
+    </ItemGroup>
+</Project>
