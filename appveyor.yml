@@ -18,7 +18,7 @@ build_script:
   - cmd: ls -l C:/projects/efcore-include-helper/EfIncluder.Library/bin/Release/netstandard2.0/
   - cmd: dotnet pack C:/projects/efcore-include-helper/EfIncluder.Library/EfIncluder.Library.csproj -c Release /p:PackageVersion=1.0.%APPVEYOR_BUILD_NUMBER%
 artifacts:
-- path: C:/projects/efcore-include-helper/EfIncluder.Library/bin/Release/*.nupkg
+- path: ./EfIncluder.Library/bin/Release/*.nupkg
   name: NuGet
 deploy:
   - provider: NuGet
