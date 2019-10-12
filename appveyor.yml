@@ -11,7 +11,7 @@ before_build:
   # Display .NET Core version
   - cmd: dotnet --version
   # Display minimal restore text
-  - cmd: dotnet restore C:/projects/efcore-include-helper/ef_includer.csproj --verbosity m
+  - cmd: dotnet restore C:/projects/efcore-include-helper/EfIncluder.Library/EfIncluder.Library.csproj --verbosity m
 build_script:
   - cmd: dotnet build C:/projects/efcore-include-helper/EfIncluder.Library/EfIncluder.Library.csproj --configuration Release
   - cmd: ls -l C:/projects/efcore-include-helper/EfIncluder.Library/bin/Release
