@@ -6,17 +6,17 @@ branches:
 init:
   - cmd: git config --global core.autocrlf true
 install:
-  - appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/v4.0.0/nuget.exe 
+  - appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/v4.0.0/nuget.exe
 before_build:
   # Display .NET Core version
   - cmd: dotnet --version
   # Display minimal restore text
   - cmd: dotnet restore C:/projects/efcore-include-helper/ef_includer.csproj --verbosity m
 build_script:
-  - cmd: dotnet build C:/projects/efcore-include-helper/ef_includer.csproj --configuration Release
-  - cmd: ls -l C:/projects/efcore-include-helper/bin/Release
-  - cmd: ls -l C:/projects/efcore-include-helper/bin/Release/netstandard2.0/
-  - cmd: dotnet pack C:/projects/efcore-include-helper/ef_includer.csproj -c Release /p:PackageVersion=1.0.%APPVEYOR_BUILD_NUMBER%
+  - cmd: dotnet build C:/projects/efcore-include-helper/EfIncluder.Library/EfIncluder.Library.csproj --configuration Release
+  - cmd: ls -l C:/projects/efcore-include-helper/EfIncluder.Library/bin/Release
+  - cmd: ls -l C:/projects/efcore-include-helper/EfIncluder.Library/bin/Release/netstandard2.0/
+  - cmd: dotnet pack C:/projects/efcore-include-helper/EfIncluder.Library/EfIncluder.Library.csproj -c Release /p:PackageVersion=1.0.%APPVEYOR_BUILD_NUMBER%
 artifacts:
 - path: ./bin/Release/*.nupkg
   name: NuGet
